@@ -1,6 +1,8 @@
 # Pipline for scraping "https://apa.az/az" website
 First all news that belongs to "2023" will be scraped. Then after each hour only new news will be added to the database.
-The uniqueness of urls is ensured by adding CONSTRAINT to the "url" column of the table while creating table.
+The uniqueness of urls is ensured by adding CONSTRAINT to the "url" column of the table while creating table. 
+The error that will be raised due to the uniqueness CONSTRAINT of the "url" column is handled and by this way it is guaranteed
+that only new news urls will be added to the database.
 ## Docker
 #### Creating network for containers to communicate.
 ```docker
